@@ -213,9 +213,9 @@ export default function Services() {
             <article className="feature">
               <h3>Virtual-ready, with national reach</h3>
               <p>
-                All services are available through secure virtual platforms. For remote communities,
-                Northern locations, or federally regulated organizations across multiple provinces,
-                virtual delivery means no travel delays and no added cost.
+                All services are available through secure virtual platforms. For remote communities
+                or federally regulated organizations across multiple provinces, virtual delivery
+                means no travel delays and no added cost.
               </p>
             </article>
             <article className="feature">
