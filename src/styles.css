@@ -430,7 +430,7 @@ a:hover { color: var(--plum-deep); }
 
 /* ---------- Services page ---------- */
 .svc-subnav {
-  background: var(--paper-deep);
+  background: var(--white);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 62px;
@@ -438,44 +438,34 @@ a:hover { color: var(--plum-deep); }
 }
 .svc-subnav ul {
   display: flex;
-  gap: 0.5rem;
+  gap: clamp(0.75rem, 3.5vw, 3rem);
   list-style: none;
   margin: 0;
-  padding: 0.75rem 0;
+  padding: 0;
   overflow-x: auto;
+  scrollbar-width: thin;
 }
 .svc-subnav a {
   display: inline-block;
   white-space: nowrap;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--ink-soft);
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.45rem 1.1rem;
+  padding: 1.05rem 0.15rem 0.85rem;
+  border-bottom: 3px solid transparent;
 }
-.svc-subnav a:hover {
-  border-color: var(--plum);
+.svc-subnav a:hover,
+.svc-subnav a:focus-visible {
   color: var(--plum);
+  border-bottom-color: var(--amber);
 }
 
 .svc-section { padding: clamp(3rem, 7vw, 5rem) 0; }
 .svc-section + .svc-section { border-top: 1px solid var(--line); }
-.svc-section .num {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(2.6rem, 6vw, 4rem);
-  color: var(--plum-tint);
-  -webkit-text-stroke: 2px var(--plum);
-  line-height: 1;
-  display: block;
-  margin-bottom: 0.5rem;
-}
 
 .method-grid {
   display: grid;

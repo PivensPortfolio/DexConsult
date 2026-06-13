@@ -58,9 +58,7 @@ export default function Services() {
         <span id="AccessibilityEnhancements" aria-hidden="true" />
         <span id="SensitivityTraining" aria-hidden="true" />
         <div className="container">
-          <span className="num" aria-hidden="true">
-            01
-          </span>
+          <p className="kicker">Service 01</p>
           <h2 id="ac-heading">Accessibility Consulting</h2>
           <p className="svc-tagline">
             Building a more accessible organization. For real, not just on paper.
@@ -149,9 +147,7 @@ export default function Services() {
       >
         <span id="InvestigativeServices" aria-hidden="true" />
         <div className="container">
-          <span className="num" aria-hidden="true">
-            02
-          </span>
+          <p className="kicker">Service 02</p>
           <h2 id="wi-heading">Workplace Investigation</h2>
           <p className="svc-tagline">Independent. Thorough. Done right.</p>
           <p>
@@ -235,9 +231,7 @@ export default function Services() {
       <section className="svc-section" id="DisputeResolution" aria-labelledby="dr-heading">
         <span id="Mediation" aria-hidden="true" />
         <div className="container">
-          <span className="num" aria-hidden="true">
-            03
-          </span>
+          <p className="kicker">Service 03</p>
           <h2 id="dr-heading">Dispute Resolution</h2>
           <p className="svc-tagline">Resolve it. Move forward.</p>
 
@@ -320,9 +314,7 @@ export default function Services() {
       >
         <span id="PublicSpeaking" aria-hidden="true" />
         <div className="container">
-          <span className="num" aria-hidden="true">
-            04
-          </span>
+          <p className="kicker">Service 04</p>
           <h2 id="re-heading">Research and Expert Services</h2>
           <p className="svc-tagline">
             Evidence for the cases that matter. Analysis that holds up.
