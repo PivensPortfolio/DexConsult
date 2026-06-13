@@ -37,6 +37,9 @@ export default function Services() {
       <nav className="svc-subnav" aria-label="Services on this page">
         <div className="container">
           <ul>
+            <li className="subnav-label" aria-hidden="true">
+              On this page:
+            </li>
             <li>
               <a href="#AccessibilityConsulting">Accessibility Consulting</a>
             </li>
