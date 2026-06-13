@@ -347,7 +347,6 @@ a:hover { color: var(--plum-deep); }
   display: flex;
   flex-direction: column;
 }
-.svc-card:nth-child(2) { border-top-color: var(--amber); }
 .svc-card .svc-num {
   font-family: var(--font-display);
   font-weight: 800;
