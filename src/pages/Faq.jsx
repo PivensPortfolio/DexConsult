@@ -57,7 +57,12 @@ export default function Faq() {
           <div className="faq-list">
             {faqs.map((item, i) => (
               <details className="faq-item" key={item.q} open={i === 0}>
-                <summary>{item.q}</summary>
+                <summary>
+                  <span className="faq-num" aria-hidden="true">
+                    Q.{String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3>{item.q}</h3>
+                </summary>
                 <div className="faq-body">
                   <p>{item.a}</p>
                 </div>
@@ -70,13 +75,13 @@ export default function Faq() {
       <section className="cta-band" aria-label="Contact call to action">
         <div className="container">
           <h2>Still have a question?</h2>
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <a href={`mailto:${EMAIL}`} className="btn btn-amber">
-              {EMAIL}
+              Email Andy
             </a>
-            <a href="tel:+13067133977" className="btn btn-ghost-light">
-              1 (306) 713-3977
-            </a>
+            <span className="cta-aside">
+              or call <a href="tel:+13067133977">1 (306) 713-3977</a>
+            </span>
           </div>
         </div>
       </section>

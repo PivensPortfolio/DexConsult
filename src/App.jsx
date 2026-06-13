@@ -15,10 +15,20 @@ function ScrollManager() {
       const el = document.getElementById(hash.slice(1))
       if (el) {
         el.scrollIntoView()
+        // Move focus into the section so keyboard/SR users land where they navigated
+        const target = el.closest('section') || el
+        target.setAttribute('tabindex', '-1')
+        target.focus({ preventScroll: true })
         return
       }
     }
     window.scrollTo(0, 0)
+    // On route change, move focus to the new page's H1 so the change is announced
+    const h1 = document.querySelector('main h1')
+    if (h1) {
+      h1.setAttribute('tabindex', '-1')
+      h1.focus({ preventScroll: true })
+    }
   }, [pathname, hash])
   return null
 }

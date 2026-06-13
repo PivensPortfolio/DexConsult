@@ -6,7 +6,7 @@ const EMAIL = 'getStarted@DexConsult.ca'
 export default function Contact() {
   usePageMeta(
     'Contact Us by Email or Phone | Dexterity Consulting',
-    'Contact Dexterity Consulting in Saskatoon by email at getStarted@DexConsult.ca or by phone at 1 (306) 713-3977.',
+    'Contact Dexterity Consulting in Saskatoon by email at getStarted@DexConsult.ca or by phone at 1 (306) 713-3977. Free initial consultation, response within one business day.',
   )
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
 
@@ -25,21 +25,32 @@ export default function Contact() {
         <div className="container">
           <p className="kicker kicker--light">Get in touch</p>
           <h1>Contact</h1>
-          <p>Start your accessibility journey with us.</p>
+          <p>
+            Whether you are resolving a dispute, facing a complaint, or making a space more
+            accessible, we would love to hear from you.
+          </p>
         </div>
       </section>
 
       <section className="section" aria-labelledby="contact-heading">
         <div className="container">
-          <h2 id="contact-heading" className="sr-only" style={{ position: 'absolute', left: '-9999px' }}>
+          <h2
+            id="contact-heading"
+            style={{ position: 'absolute', left: '-9999px' }}
+          >
             Contact form and contact information
           </h2>
+
+          <div className="assurance" aria-label="What to expect">
+            <span>All inquiries are confidential.</span>
+            <span>Response within one business day.</span>
+            <span>Free initial consultation.</span>
+          </div>
+
           <div className="contact-grid">
             <form className="contact-form" onSubmit={submit}>
               <div className="field">
-                <label htmlFor="name">
-                  Your Name <span className="req" aria-hidden="true">*</span>
-                </label>
+                <label htmlFor="name">Name</label>
                 <input
                   id="name"
                   name="name"
@@ -51,9 +62,7 @@ export default function Contact() {
                 />
               </div>
               <div className="field">
-                <label htmlFor="email">
-                  Your Email <span className="req" aria-hidden="true">*</span>
-                </label>
+                <label htmlFor="email">Email</label>
                 <input
                   id="email"
                   name="email"
@@ -65,20 +74,29 @@ export default function Contact() {
                 />
               </div>
               <div className="field">
-                <label htmlFor="subject">Subject</label>
+                <label htmlFor="subject">
+                  Subject <span className="optional">(optional)</span>
+                </label>
                 <input id="subject" name="subject" type="text" value={form.subject} onChange={update} />
               </div>
               <div className="field">
-                <label htmlFor="message">Your Message</label>
-                <textarea id="message" name="message" rows="7" value={form.message} onChange={update} />
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="7"
+                  required
+                  value={form.message}
+                  onChange={update}
+                />
               </div>
-              <button type="submit" className="btn btn-plum">
-                Send Message
-              </button>
               <p className="form-note">
                 Submitting opens your email app with your message ready to send. Prefer to write
                 directly? Email <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
               </p>
+              <button type="submit" className="btn btn-plum">
+                Open in your email app
+              </button>
             </form>
 
             <aside className="contact-card" aria-label="Contact information">
