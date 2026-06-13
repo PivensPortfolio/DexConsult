@@ -351,7 +351,7 @@ a:hover { color: var(--plum-deep); }
   font-weight: 800;
   font-size: 0.85rem;
   letter-spacing: 0.2em;
-  color: var(--amber-deep);
+  color: #94610f; /* darker amber: 5.28:1 on white, meets WCAG 2.2 AA (1.4.3) */
   margin-bottom: 1rem;
 }
 .svc-card p { font-size: 1.02rem; margin-bottom: 1.5rem; }
@@ -859,6 +859,8 @@ a:hover { color: var(--plum-deep); }
   justify-content: center;
   text-align: center;
 }
+/* Underline so links in body text are distinguishable without colour (WCAG 2.2 A, 1.4.1) */
+.footer-a11y a { text-decoration: underline; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
