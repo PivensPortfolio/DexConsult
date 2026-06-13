@@ -180,7 +180,7 @@ export default function Contact() {
               )}
             </div>
 
-            <aside className="contact-card" aria-label="Contact information">
+            <div className="contact-card">
               <h2>Contact Info</h2>
               <p>
                 Whether you are resolving a dispute or making a space more accessible, we would love
@@ -196,7 +196,7 @@ export default function Contact() {
               </a>
               <div className="label">Location</div>
               <p>Saskatoon, Saskatchewan, Canada</p>
-            </aside>
+            </div>
           </div>
         </div>
       </section>
