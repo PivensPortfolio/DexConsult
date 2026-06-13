@@ -63,9 +63,9 @@ export default function Team() {
                 can participate fully.
               </p>
               <blockquote className="pull-quote">
-                Andy is a person with a disability. That lived experience grounds his accessibility
-                and accommodation work, and shapes how he runs accessible dispute resolution
-                proceedings. It is a credential, not a footnote.
+                Andy&rsquo;s accessibility and accommodation work is grounded in lived experience of
+                disability. It&rsquo;s also why the proceedings he runs are accessible in practice,
+                not just on paper.
               </blockquote>
             </div>
           </div>
