@@ -159,7 +159,7 @@ export default function Team() {
         <div className="container">
           <h2>Ready to talk about your organization&rsquo;s needs?</h2>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="mailto:andy@dexconsult.ca" className="btn btn-amber">
+            <a href="mailto:andy@dexconsult.ca" className="btn btn-amber btn-email">
               andy@dexconsult.ca
             </a>
             <a href="tel:+13067133977" className="btn btn-ghost-light">

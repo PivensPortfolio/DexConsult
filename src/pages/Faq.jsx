@@ -71,7 +71,7 @@ export default function Faq() {
         <div className="container">
           <h2>Still have a question?</h2>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href={`mailto:${EMAIL}`} className="btn btn-amber">
+            <a href={`mailto:${EMAIL}`} className="btn btn-amber btn-email">
               {EMAIL}
             </a>
             <a href="tel:+13067133977" className="btn btn-ghost-light">
