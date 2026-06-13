@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'Are services available virtually?',
-    a: 'Yes. All services are available through secure virtual platforms, with national reach. Virtual delivery means no travel delays and no added travel cost for clients in remote communities, Northern locations, or organizations operating across multiple provinces.',
+    a: 'Yes. All services are available through secure virtual platforms, with national reach. Virtual delivery means no travel delays and no added travel cost for clients in remote communities or organizations operating across multiple provinces.',
   },
   {
     q: 'How quickly will I get a response?',
@@ -71,7 +71,7 @@ export default function Faq() {
         <div className="container">
           <h2>Still have a question?</h2>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href={`mailto:${EMAIL}`} className="btn btn-amber">
+            <a href={`mailto:${EMAIL}`} className="btn btn-amber btn-email">
               {EMAIL}
             </a>
             <a href="tel:+13067133977" className="btn btn-ghost-light">

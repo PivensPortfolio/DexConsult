@@ -258,6 +258,8 @@ a:hover { color: var(--plum-deep); }
   border-color: rgba(255, 255, 255, 0.55);
 }
 .btn-ghost-light:hover { border-color: var(--amber); color: var(--amber); }
+/* Email/contact buttons read naturally instead of shouting in all-caps */
+.btn-email { text-transform: none; letter-spacing: 0.01em; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -345,7 +347,6 @@ a:hover { color: var(--plum-deep); }
   display: flex;
   flex-direction: column;
 }
-.svc-card:nth-child(2) { border-top-color: var(--amber); }
 .svc-card .svc-num {
   font-family: var(--font-display);
   font-weight: 800;

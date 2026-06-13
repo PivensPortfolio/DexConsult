@@ -8,7 +8,7 @@ function SectionCta({ lead }) {
   return (
     <div className="svc-cta">
       <p>{lead}</p>
-      <a className="btn btn-plum" href={`mailto:${EMAIL}`}>
+      <a className="btn btn-plum btn-email" href={`mailto:${EMAIL}`}>
         {EMAIL}
       </a>
       <a className="btn btn-amber" href={PHONE_HREF}>

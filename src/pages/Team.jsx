@@ -110,8 +110,7 @@ export default function Team() {
           <h3>Appointments &amp; Memberships</h3>
           <ul className="affiliations">
             <li>
-              Vice-Chair, Technical Committee on Employment, Accessibility Standards Canada (the
-              federal body responsible for writing national accessibility standards)
+              Vice-Chair, Technical Committee on Employment, Accessibility Standards Canada
             </li>
             <li>
               Adviser on disability and accessibility matters, Diversified Dispute Resolution
@@ -159,7 +158,7 @@ export default function Team() {
         <div className="container">
           <h2>Ready to talk about your organization&rsquo;s needs?</h2>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="mailto:andy@dexconsult.ca" className="btn btn-amber">
+            <a href="mailto:andy@dexconsult.ca" className="btn btn-amber btn-email">
               andy@dexconsult.ca
             </a>
             <a href="tel:+13067133977" className="btn btn-ghost-light">

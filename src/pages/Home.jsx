@@ -43,9 +43,6 @@ export default function Home() {
           <h1 className="reveal reveal-1">
             Making dispute resolution <span className="accent">accessible for all.</span>
           </h1>
-          <p className="hero-sub reveal reveal-2">
-            Let us help you solve accessibility and accommodation issues.
-          </p>
           <div className="hero-actions reveal reveal-3">
             <Link to="/contact" className="btn btn-amber">
               Get Started
