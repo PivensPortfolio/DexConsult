@@ -773,6 +773,26 @@ a:hover { color: var(--plum-deep); }
   border-color: var(--plum);
 }
 .form-note { font-size: 0.92rem; color: var(--ink-soft); margin-top: 1rem; }
+.form-error {
+  background: #fdf3f3;
+  border: 1px solid #b3261e;
+  color: #7a1a14;
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--radius);
+  font-size: 0.98rem;
+  margin-bottom: 1.25rem;
+}
+.form-error a { color: #7a1a14; font-weight: 600; }
+.form-success h3 {
+  border-bottom: 3px solid var(--amber);
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+.contact-form .btn[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
 
 .contact-card {
   background: var(--ink);

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import usePageMeta from '../usePageMeta.js'
 
 const EMAIL = 'getStarted@DexConsult.ca'
+const ENDPOINT = `https://formsubmit.co/ajax/${EMAIL}`
 
 export default function Contact() {
   usePageMeta(
@@ -9,14 +10,37 @@ export default function Contact() {
     'Contact Dexterity Consulting in Saskatoon by email at getStarted@DexConsult.ca or by phone at 1 (306) 713-3977.',
   )
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
 
   const update = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault()
-    const subject = encodeURIComponent(form.subject || `Website inquiry from ${form.name}`)
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`
+    setStatus('sending')
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject || '(none given)',
+          message: form.message,
+          _subject: `Website inquiry from ${form.name}`,
+          _replyto: form.email,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      })
+      const data = await res.json()
+      if (res.ok && String(data.success) === 'true') {
+        setStatus('sent')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -31,55 +55,102 @@ export default function Contact() {
 
       <section className="section" aria-labelledby="contact-heading">
         <div className="container">
-          <h2 id="contact-heading" className="sr-only" style={{ position: 'absolute', left: '-9999px' }}>
+          <h2 id="contact-heading" style={{ position: 'absolute', left: '-9999px' }}>
             Contact form and contact information
           </h2>
           <div className="contact-grid">
-            <form className="contact-form" onSubmit={submit}>
-              <div className="field">
-                <label htmlFor="name">
-                  Your Name <span className="req" aria-hidden="true">*</span>
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                  value={form.name}
-                  onChange={update}
-                />
-              </div>
-              <div className="field">
-                <label htmlFor="email">
-                  Your Email <span className="req" aria-hidden="true">*</span>
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  value={form.email}
-                  onChange={update}
-                />
-              </div>
-              <div className="field">
-                <label htmlFor="subject">Subject</label>
-                <input id="subject" name="subject" type="text" value={form.subject} onChange={update} />
-              </div>
-              <div className="field">
-                <label htmlFor="message">Your Message</label>
-                <textarea id="message" name="message" rows="7" value={form.message} onChange={update} />
-              </div>
-              <button type="submit" className="btn btn-plum">
-                Send Message
-              </button>
-              <p className="form-note">
-                Submitting opens your email app with your message ready to send. Prefer to write
-                directly? Email <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
-              </p>
-            </form>
+            <div aria-live="polite">
+              {status === 'sent' ? (
+                <div className="contact-form form-success">
+                  <h3>Message received.</h3>
+                  <p>
+                    Thank you, {form.name || 'we have your message'}. You&rsquo;ll hear back within
+                    one business day.
+                  </p>
+                  <p>
+                    Need to add something? Email{' '}
+                    <a href={`mailto:${EMAIL}`}>{EMAIL}</a> or call{' '}
+                    <a href="tel:+13067133977">1 (306) 713-3977</a>.
+                  </p>
+                </div>
+              ) : (
+                <form className="contact-form" onSubmit={submit}>
+                  <div className="field">
+                    <label htmlFor="name">
+                      Your Name <span className="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      autoComplete="name"
+                      required
+                      value={form.name}
+                      onChange={update}
+                    />
+                  </div>
+                  <div className="field">
+                    <label htmlFor="email">
+                      Your Email <span className="req" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      required
+                      value={form.email}
+                      onChange={update}
+                    />
+                  </div>
+                  <div className="field">
+                    <label htmlFor="subject">Subject</label>
+                    <input
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      value={form.subject}
+                      onChange={update}
+                    />
+                  </div>
+                  <div className="field">
+                    <label htmlFor="message">
+                      Your Message <span className="req" aria-hidden="true">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="7"
+                      required
+                      value={form.message}
+                      onChange={update}
+                    />
+                  </div>
+                  {status === 'error' && (
+                    <p className="form-error" role="alert">
+                      Sorry, your message could not be sent. Your text is still here. Please try
+                      again, or{' '}
+                      <a
+                        href={`mailto:${EMAIL}?subject=${encodeURIComponent(
+                          form.subject || `Website inquiry from ${form.name}`,
+                        )}&body=${encodeURIComponent(
+                          `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
+                        )}`}
+                      >
+                        send it through your email app instead
+                      </a>
+                      .
+                    </p>
+                  )}
+                  <button type="submit" className="btn btn-plum" disabled={status === 'sending'}>
+                    {status === 'sending' ? 'Sending…' : 'Send Message'}
+                  </button>
+                  <p className="form-note">
+                    Your message goes straight to our inbox. We respond within one business day.
+                  </p>
+                </form>
+              )}
+            </div>
 
             <aside className="contact-card" aria-label="Contact information">
               <h2>Contact Info</h2>
