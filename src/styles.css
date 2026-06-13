@@ -658,16 +658,9 @@ a:hover { color: var(--plum-deep); }
   position: relative;
 }
 .profile-photo img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lift);
-}
-.profile-photo::after {
-  content: '';
-  position: absolute;
-  inset: 1.25rem -1.25rem -1.25rem 1.25rem;
   border: 3px solid var(--amber);
   border-radius: var(--radius);
-  z-index: -1;
+  box-shadow: var(--shadow-lift);
 }
 .profile-meta {
   margin-top: 2.25rem;
