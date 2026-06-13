@@ -110,8 +110,7 @@ export default function Team() {
           <h3>Appointments &amp; Memberships</h3>
           <ul className="affiliations">
             <li>
-              Vice-Chair, Technical Committee on Employment, Accessibility Standards Canada (the
-              federal body responsible for writing national accessibility standards)
+              Vice-Chair, Technical Committee on Employment, Accessibility Standards Canada
             </li>
             <li>
               Adviser on disability and accessibility matters, Diversified Dispute Resolution
