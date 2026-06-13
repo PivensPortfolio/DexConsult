@@ -46,6 +46,11 @@ export default function Header() {
                 </NavLink>
               </li>
               <li>
+                <NavLink to="/faq" onClick={close}>
+                  FAQ
+                </NavLink>
+              </li>
+              <li>
                 <NavLink
                   to="/contact"
                   className="nav-cta"

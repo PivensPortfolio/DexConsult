@@ -4,21 +4,27 @@ import usePageMeta from '../usePageMeta.js'
 const services = [
   {
     num: '01',
-    title: 'Dispute Resolution',
-    body: 'Dexterity Consulting offers mediation, arbitration, and parent coordination services.',
-    anchor: 'Mediation',
+    title: 'Accessibility Consulting',
+    body: 'Accessibility plans, RHFAC and WCAG audits, community engagement, and standards consulting. Building a more accessible organization. For real, not just on paper.',
+    anchor: 'AccessibilityConsulting',
   },
   {
     num: '02',
-    title: 'Accessibility Enhancements',
-    body: 'We work with individuals, businesses, organizations, educational institutions and government institutions to assist them in making physical spaces or services available to all.',
-    anchor: 'AccessibilityEnhancements',
+    title: 'Workplace Investigation',
+    body: 'Independent, third-party investigations of harassment, discrimination, and code of conduct complaints, with the procedural fairness and rigour these situations require.',
+    anchor: 'WorkplaceInvestigation',
   },
   {
     num: '03',
-    title: 'Investigative Services',
-    body: 'Dexterity Consulting provides balanced and neutral investigative services dealing with harassment, bullying, discrimination, or code of conduct violations.',
-    anchor: 'InvestigativeServices',
+    title: 'Dispute Resolution',
+    body: 'Mediation, arbitration, med-arb, family mediation, and parent coordination, in person or through secure virtual platforms across Canada and globally.',
+    anchor: 'DisputeResolution',
+  },
+  {
+    num: '04',
+    title: 'Research & Expert Services',
+    body: 'Expert witness and litigation support, applied research, knowledge translation, and ADR training. Evidence for the cases that matter.',
+    anchor: 'ResearchExpertServices',
   },
 ]
 
@@ -55,7 +61,7 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <p className="kicker">What we do</p>
-            <h2 id="services-heading">Some of the services we provide</h2>
+            <h2 id="services-heading">Four ways we help organizations move forward</h2>
           </div>
           <div className="card-grid">
             {services.map((s) => (

@@ -518,6 +518,118 @@ a:hover { color: var(--plum-deep); }
   padding-left: 1rem;
 }
 
+.svc-tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  color: var(--plum);
+  margin: -0.5rem 0 1.5rem;
+}
+
+.svc-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  background: var(--plum-tint);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin-top: 2.5rem;
+}
+.svc-cta p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin: 0;
+  flex: 1 1 16rem;
+}
+.svc-cta .btn { white-space: nowrap; }
+
+.type-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 1.5rem;
+}
+.type-chips li {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  color: var(--ink-soft);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 0;
+}
+.feature {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.6rem;
+}
+.feature h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+.feature h3::before {
+  content: '';
+  display: block;
+  width: 2.25rem;
+  height: 4px;
+  background: var(--amber);
+  border-radius: 2px;
+  margin-bottom: 0.85rem;
+}
+.feature p { font-size: 1rem; margin-bottom: 0; }
+
+/* ---------- FAQ ---------- */
+.faq-list { max-width: 54rem; }
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  padding: 1.25rem 1.5rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--plum);
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item[open] summary { border-bottom: 1px dashed var(--line); }
+.faq-item summary:hover { color: var(--plum); }
+.faq-body { padding: 1.25rem 1.5rem; }
+.faq-body p { margin-bottom: 0; font-size: 1.05rem; }
+
 /* ---------- Meet Andy ---------- */
 .profile-grid {
   display: grid;
