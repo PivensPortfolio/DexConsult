@@ -448,6 +448,15 @@ a:hover { color: var(--plum-deep); }
 @media (max-width: 1100px) {
   .svc-subnav .subnav-label { display: none; }
 }
+@media (max-width: 900px) {
+  .svc-subnav { position: static; }
+  .svc-subnav ul {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 0 1.75rem;
+    padding: 0.25rem 0;
+  }
+}
 .svc-subnav .subnav-label {
   white-space: nowrap;
   font-family: var(--font-display);

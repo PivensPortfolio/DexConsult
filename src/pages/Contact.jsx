@@ -14,30 +14,58 @@ export default function Contact() {
 
   const update = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
+  const sendViaFormSubmit = async () => {
+    const res = await fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        subject: form.subject || '(none given)',
+        message: form.message,
+        _subject: `Website inquiry from ${form.name}`,
+        _replyto: form.email,
+        _template: 'table',
+        _captcha: 'false',
+      }),
+    })
+    const data = await res.json()
+    return res.ok && String(data.success) === 'true'
+  }
+
   const submit = async (e) => {
     e.preventDefault()
     setStatus('sending')
     try {
-      const res = await fetch(ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          subject: form.subject || '(none given)',
-          message: form.message,
-          _subject: `Website inquiry from ${form.name}`,
-          _replyto: form.email,
-          _template: 'table',
-          _captcha: 'false',
-        }),
-      })
-      const data = await res.json()
-      if (res.ok && String(data.success) === 'true') {
-        setStatus('sent')
-      } else {
-        setStatus('error')
+      // Preferred path: our own serverless function (Resend). Returns 503
+      // until RESEND_API_KEY is configured, in which case we fall back to
+      // the FormSubmit relay.
+      let sent = false
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            subject: form.subject,
+            message: form.message,
+          }),
+        })
+        if (res.ok) {
+          const data = await res.json().catch(() => ({}))
+          sent = data.success === true
+        } else if (res.status !== 503 && res.status !== 404) {
+          // Function exists and failed hard; still try the relay below.
+          sent = false
+        }
+      } catch {
+        sent = false
       }
+      if (!sent) {
+        sent = await sendViaFormSubmit()
+      }
+      setStatus(sent ? 'sent' : 'error')
     } catch {
       setStatus('error')
     }
