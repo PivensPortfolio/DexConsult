@@ -7,6 +7,7 @@ import Services from './pages/Services.jsx'
 import Team from './pages/Team.jsx'
 import Contact from './pages/Contact.jsx'
 import Faq from './pages/Faq.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 function ScrollManager() {
   const { pathname, hash } = useLocation()
@@ -41,7 +42,7 @@ export default function App() {
           {/* Legacy WordPress paths */}
           <Route path="/pages/our-team" element={<Navigate to="/our-team" replace />} />
           <Route path="/pages/contact" element={<Navigate to="/contact" replace />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

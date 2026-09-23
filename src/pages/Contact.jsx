@@ -1,16 +1,17 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import usePageMeta from '../usePageMeta.js'
 
-const EMAIL = 'getStarted@DexConsult.ca'
+const EMAIL = 'andy@dexconsult.ca'
 const ENDPOINT = `https://formsubmit.co/ajax/${EMAIL}`
 
 export default function Contact() {
   usePageMeta(
     'Contact Us by Email or Phone | Dexterity Consulting',
-    'Contact Dexterity Consulting in Saskatoon by email at getStarted@DexConsult.ca or by phone at 1 (306) 713-3977.',
+    'Contact Dexterity Consulting in Saskatoon by email at andy@dexconsult.ca or by phone at 1 (306) 713-3977.',
   )
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '', _honey: '' })
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const startedAt = useRef(Date.now())
 
   const update = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -27,6 +28,7 @@ export default function Contact() {
         _replyto: form.email,
         _template: 'table',
         _captcha: 'false',
+        _honey: form._honey,
       }),
     })
     const data = await res.json()
@@ -50,6 +52,8 @@ export default function Contact() {
             email: form.email,
             subject: form.subject,
             message: form.message,
+            _honey: form._honey,
+            elapsedMs: Date.now() - startedAt.current,
           }),
         })
         if (res.ok) {
@@ -103,6 +107,28 @@ export default function Contact() {
                 </div>
               ) : (
                 <form className="contact-form" onSubmit={submit}>
+                  {/* Honeypot: off-screen and hidden from assistive tech; only bots fill it. */}
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: 'absolute',
+                      left: '-9999px',
+                      width: '1px',
+                      height: '1px',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <label htmlFor="company">Company (leave this blank)</label>
+                    <input
+                      id="company"
+                      name="_honey"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={form._honey}
+                      onChange={update}
+                    />
+                  </div>
                   <div className="field">
                     <label htmlFor="name">
                       Your Name <span className="req" aria-hidden="true">*</span>

@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const PHONE = '1 (306) 713-3977'
 const PHONE_HREF = 'tel:+13067133977'
-const EMAIL = 'getStarted@DexConsult.ca'
+const EMAIL = 'andy@dexconsult.ca'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
