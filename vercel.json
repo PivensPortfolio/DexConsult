@@ -1,14 +1,5 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/our-services", "destination": "/index.html" },
-    { "source": "/our-team", "destination": "/index.html" },
-    { "source": "/faq", "destination": "/index.html" },
-    { "source": "/contact", "destination": "/index.html" },
-    { "source": "/pages/our-team", "destination": "/index.html" },
-    { "source": "/pages/contact", "destination": "/index.html" }
-  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "headers": [
     {
       "source": "/assets/(.*)",
