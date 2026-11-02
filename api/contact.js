@@ -5,7 +5,7 @@
 // Env vars:
 //   RESEND_API_KEY  (required to activate)
 //   CONTACT_TO      optional, default andy@dexconsult.ca
-//   CONTACT_FROM    optional, default "DexConsult Website <noreply@dexconsult.ca>"
+//   CONTACT_FROM    optional, default "Dexterity Consulting Website <noreply@dexconsult.ca>"
 //                   (the from domain must be verified in Resend)
 
 export default async function handler(req, res) {
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
   }
 
   const to = process.env.CONTACT_TO || 'andy@dexconsult.ca'
-  const from = process.env.CONTACT_FROM || 'DexConsult Website <noreply@dexconsult.ca>'
+  const from = process.env.CONTACT_FROM || 'Dexterity Consulting Website <noreply@dexconsult.ca>'
 
   try {
     const r = await fetch('https://api.resend.com/emails', {

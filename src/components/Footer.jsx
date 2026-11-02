@@ -5,20 +5,17 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container">
         <Link to="/" aria-label="Dexterity Consulting home">
-          <img
-            src="/images/logo-small.png"
-            alt="Dexterity Consulting"
-            width="203"
-            height="40"
-            loading="lazy"
-          />
+          {/* The link's aria-label already names it, so the image is decorative here. */}
+          <img src="/images/logo-small.png" alt="" width="203" height="40" loading="lazy" />
         </Link>
         <div className="footer-contact">
           <a href="tel:+13067133977">1 (306) 713-3977</a>
           <a href="mailto:andy@dexconsult.ca">andy@dexconsult.ca</a>
           <span>Saskatoon, Saskatchewan</span>
         </div>
-        <span>&copy; {new Date().getFullYear()} Dexterity Consulting</span>
+        {/* The year is computed at build time and again in the browser; they only differ
+            around New Year, so quiet the harmless hydration notice for this one span. */}
+        <span suppressHydrationWarning>&copy; {new Date().getFullYear()} Dexterity Consulting</span>
       </div>
       <div className="footer-a11y">
         <div className="container">

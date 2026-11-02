@@ -261,6 +261,19 @@ a:hover { color: var(--plum-deep); }
 /* Email/contact buttons read naturally instead of shouting in all-caps */
 .btn-email { text-transform: none; letter-spacing: 0.01em; }
 
+/* Text for screen readers only (for example the service name after each "Learn more") */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -659,6 +672,7 @@ a:hover { color: var(--plum-deep); }
 .profile-photo {
   position: relative;
 }
+.profile-photo picture { display: block; }
 .profile-photo img {
   border: 3px solid var(--amber);
   border-radius: var(--radius);

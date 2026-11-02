@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import usePageMeta from '../usePageMeta.js'
+import { ROUTES } from '../seo.js'
 
 const services = [
   {
@@ -29,10 +30,7 @@ const services = [
 ]
 
 export default function Home() {
-  usePageMeta(
-    'Dispute Resolution Services | Dexterity Consulting Saskatoon',
-    'Dexterity Consulting makes dispute resolution accessible for all: mediation, arbitration, parent coordination, accessibility consulting, and investigative services in Saskatoon.',
-  )
+  usePageMeta(ROUTES['/'])
 
   return (
     <>
@@ -67,7 +65,7 @@ export default function Home() {
                 <h3>{s.title}</h3>
                 <p>{s.body}</p>
                 <Link className="svc-link" to={`/our-services#${s.anchor}`}>
-                  Learn more
+                  Learn more<span className="sr-only"> about {s.title}</span>
                 </Link>
               </article>
             ))}
