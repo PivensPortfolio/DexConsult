@@ -30,7 +30,7 @@ export const ROUTES = {
     path: '/',
     title: 'Mediation, Arbitration & Workplace Investigation in Saskatoon | Dexterity Consulting',
     description:
-      'Independent mediation, arbitration and workplace investigation from Saskatoon, in person across Western Canada and online nationwide. Dispute resolution accessible for all.',
+      'Independent mediation, arbitration and workplace investigation from Saskatoon, plus accessibility consulting. In person across Western Canada, online nationwide.',
   },
   '/our-services': {
     path: '/our-services',
