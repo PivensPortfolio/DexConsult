@@ -1,9 +1,9 @@
 {
-  "trailingSlash": false,
   "redirects": [
     { "source": "/pages/our-team", "destination": "/our-team", "permanent": true },
     { "source": "/pages/contact", "destination": "/contact", "permanent": true }
   ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "headers": [
     {
       "source": "/assets/(.*)",
