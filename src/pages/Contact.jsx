@@ -1,14 +1,12 @@
 import { useState, useRef } from 'react'
 import usePageMeta from '../usePageMeta.js'
+import { ROUTES } from '../seo.js'
 
 const EMAIL = 'andy@dexconsult.ca'
 const ENDPOINT = `https://formsubmit.co/ajax/${EMAIL}`
 
 export default function Contact() {
-  usePageMeta(
-    'Contact Us by Email or Phone | Dexterity Consulting',
-    'Contact Dexterity Consulting in Saskatoon by email at andy@dexconsult.ca or by phone at 1 (306) 713-3977.',
-  )
+  usePageMeta(ROUTES['/contact'])
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '', _honey: '' })
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
   const startedAt = useRef(Date.now())
@@ -129,6 +127,9 @@ export default function Contact() {
                       onChange={update}
                     />
                   </div>
+                  <p className="form-note" style={{ marginTop: 0 }}>
+                    Fields marked with an asterisk (*) are required.
+                  </p>
                   <div className="field">
                     <label htmlFor="name">
                       Your Name <span className="req" aria-hidden="true">*</span>

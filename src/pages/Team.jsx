@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom'
 import usePageMeta from '../usePageMeta.js'
+import { ROUTES } from '../seo.js'
 
 export default function Team() {
-  usePageMeta(
-    'Arbitrator. Mediator. Investigator. | Andy Livingston BA(Hons) MA Q.Arb Q.Med | Dexterity Consulting',
-    'Meet Andrew (Andy) Livingston, President and CEO of Dexterity Consulting: independent arbitrator, mediator, workplace investigator, and accessibility consultant based in Saskatoon.',
-  )
+  usePageMeta(ROUTES['/our-team'])
 
   return (
     <>
@@ -22,12 +20,16 @@ export default function Team() {
           <div className="profile-grid">
             <div>
               <div className="profile-photo">
-                <img
-                  src="/images/andy-livingston.jpg"
-                  alt="Andy Livingston, President and CEO of Dexterity Consulting"
-                  width="600"
-                  height="750"
-                />
+                <picture>
+                  <source type="image/avif" srcSet="/images/andy-livingston.avif" />
+                  <source type="image/webp" srcSet="/images/andy-livingston.webp" />
+                  <img
+                    src="/images/andy-livingston.jpg"
+                    alt="Andy Livingston, President and CEO of Dexterity Consulting"
+                    width="600"
+                    height="750"
+                  />
+                </picture>
               </div>
               <div className="profile-meta">
                 <div className="name">Andrew (Andy) Livingston</div>

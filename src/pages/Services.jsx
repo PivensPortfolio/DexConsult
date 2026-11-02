@@ -1,4 +1,5 @@
 import usePageMeta from '../usePageMeta.js'
+import { ROUTES } from '../seo.js'
 
 const EMAIL = 'andy@dexconsult.ca'
 const PHONE = '1 (306) 713-3977'
@@ -19,10 +20,7 @@ function SectionCta({ lead }) {
 }
 
 export default function Services() {
-  usePageMeta(
-    'Accessibility Consulting, Workplace Investigation, Dispute Resolution | Dexterity Consulting',
-    'Four service lines: accessibility consulting, workplace investigation, dispute resolution (mediation, arbitration, med-arb), and research and expert services. Saskatoon-based, national reach.',
-  )
+  usePageMeta(ROUTES['/our-services'])
 
   return (
     <>

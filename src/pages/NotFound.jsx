@@ -1,30 +1,10 @@
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
 import usePageMeta from '../usePageMeta.js'
+import { NOT_FOUND } from '../seo.js'
 
 export default function NotFound() {
-  usePageMeta(
-    'Page not found | Dexterity Consulting',
-    'The page you were looking for could not be found.',
-  )
-
-  // Tell crawlers not to index this page. Restored on unmount so the rest of
-  // the single-page app is unaffected.
-  useEffect(() => {
-    let tag = document.querySelector('meta[name="robots"]')
-    const created = !tag
-    if (!tag) {
-      tag = document.createElement('meta')
-      tag.setAttribute('name', 'robots')
-      document.head.appendChild(tag)
-    }
-    const prev = tag.getAttribute('content')
-    tag.setAttribute('content', 'noindex')
-    return () => {
-      if (created) tag.remove()
-      else if (prev !== null) tag.setAttribute('content', prev)
-    }
-  }, [])
+  // NOT_FOUND carries "noindex" so search engines never list this page.
+  usePageMeta(NOT_FOUND)
 
   return (
     <section className="section">
