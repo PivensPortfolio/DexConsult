@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import usePageMeta from '../usePageMeta.js'
 import { ROUTES } from '../seo.js'
 
@@ -181,6 +182,10 @@ export default function Contact() {
                       onChange={update}
                     />
                   </div>
+                  <p className="form-note" style={{ marginTop: 0 }}>
+                    Please keep your message brief and do not include confidential details about a
+                    dispute. See our <Link to="/privacy">privacy note</Link>.
+                  </p>
                   {status === 'error' && (
                     <p className="form-error" role="alert">
                       Sorry, your message could not be sent. Your text is still here. Please try

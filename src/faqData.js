@@ -11,7 +11,7 @@ export const faqs = [
   },
   {
     q: 'Are services available virtually?',
-    a: 'Yes. All services are available through secure virtual platforms, with national reach. Virtual delivery means no travel delays and no added travel cost for clients in remote communities or organizations operating across multiple provinces.',
+    a: 'Yes. All services are available through secure virtual platforms, with national and international reach. Virtual delivery means no travel delays and no added travel cost for clients in remote communities or organizations operating across multiple provinces.',
   },
   {
     q: 'How quickly will I get a response?',

@@ -9,6 +9,7 @@
 - [Meet Andy](https://dexconsult.ca/our-team): background, qualifications, and appointments
 - [FAQ](https://dexconsult.ca/faq): services, where work is done, virtual delivery, accessibility of proceedings, response times, and how to get started
 - [Contact](https://dexconsult.ca/contact): contact form, email, and phone
+- [Privacy](https://dexconsult.ca/privacy): how information shared through the site, by email, or by phone is handled
 
 ## Contact
 

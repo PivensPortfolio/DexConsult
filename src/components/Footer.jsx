@@ -12,6 +12,7 @@ export default function Footer() {
           <a href="tel:+13067133977">1 (306) 713-3977</a>
           <a href="mailto:andy@dexconsult.ca">andy@dexconsult.ca</a>
           <span>Saskatoon, Saskatchewan</span>
+          <Link to="/privacy">Privacy</Link>
         </div>
         {/* The year is computed at build time and again in the browser; they only differ
             around New Year, so quiet the harmless hydration notice for this one span. */}
