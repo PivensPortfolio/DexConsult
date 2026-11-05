@@ -30,13 +30,13 @@ export const ROUTES = {
     path: '/',
     title: 'Mediation, Arbitration & Workplace Investigation in Saskatoon | Dexterity Consulting',
     description:
-      'Independent mediation, arbitration and workplace investigation from Saskatoon, plus accessibility consulting. In person across Western Canada, online worldwide.',
+      'Independent mediation, arbitration and workplace investigation from Saskatoon, plus accessibility consulting. Serving clients across Western Canada and globally.',
   },
   '/our-services': {
     path: '/our-services',
     title: 'Mediation, Arbitration, Investigation & Accessibility Services | Dexterity Consulting',
     description:
-      'Four service lines: accessibility consulting, workplace investigation, dispute resolution (mediation, arbitration, med-arb, family mediation, parent coordination), and research and expert services. Saskatoon-based, serving clients worldwide online.',
+      'Four service lines: accessibility consulting, workplace investigation, dispute resolution (mediation, arbitration, med-arb, family mediation, parent coordination), and research and expert services. Saskatoon-based, serving clients globally.',
   },
   '/our-team': {
     path: '/our-team',
@@ -157,7 +157,7 @@ export function jsonLdFor(path) {
       areaServed: [
         { '@type': 'AdministrativeArea', name: 'Saskatchewan' },
         { '@type': 'Country', name: 'Canada' },
-        'Worldwide, virtually',
+        'Worldwide',
       ],
       description:
         'Dexterity Consulting makes dispute resolution accessible for all: mediation, arbitration, parent coordination, accessibility consulting, and investigative services.',
