@@ -87,6 +87,7 @@ const sources = {
   '/our-team': 'src/pages/Team.jsx',
   '/faq': 'src/faqData.js',
   '/contact': 'src/pages/Contact.jsx',
+  '/privacy': 'src/pages/Privacy.jsx',
 }
 const today = new Date().toISOString().slice(0, 10)
 function lastmod(p) {

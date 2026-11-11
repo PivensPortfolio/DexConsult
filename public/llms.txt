@@ -1,6 +1,6 @@
 # Dexterity Consulting
 
-> Independent mediation, arbitration, workplace investigation, accessibility consulting, and research and expert services, based in Saskatoon, Saskatchewan. In person across Saskatchewan and Western Canada, and online across Canada and internationally. Led by Andrew (Andy) Livingston, BA(Hons), MA, Q.Arb, Q.Med, President and CEO. Making dispute resolution accessible for all.
+> Independent mediation, arbitration, workplace investigation, accessibility consulting, and research and expert services, based in Saskatoon, Saskatchewan. Working with clients in Saskatchewan and Western Canada, across Canada, and globally. Led by Andrew (Andy) Livingston, BA(Hons), MA, Q.Arb, Q.Med, President and CEO. Making dispute resolution accessible for all.
 
 ## Pages
 
@@ -9,6 +9,7 @@
 - [Meet Andy](https://dexconsult.ca/our-team): background, qualifications, and appointments
 - [FAQ](https://dexconsult.ca/faq): services, where work is done, virtual delivery, accessibility of proceedings, response times, and how to get started
 - [Contact](https://dexconsult.ca/contact): contact form, email, and phone
+- [Privacy](https://dexconsult.ca/privacy): how information shared through the site, by email, or by phone is handled
 
 ## Contact
 

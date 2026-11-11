@@ -209,7 +209,7 @@ export default function Services() {
               </p>
             </article>
             <article className="feature">
-              <h3>Virtual-ready, with national reach</h3>
+              <h3>Virtual-ready, with national and international reach</h3>
               <p>
                 All services are available through secure virtual platforms. For remote communities
                 or federally regulated organizations across multiple provinces, virtual delivery

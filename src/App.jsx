@@ -7,6 +7,7 @@ import Services from './pages/Services.jsx'
 import Team from './pages/Team.jsx'
 import Contact from './pages/Contact.jsx'
 import Faq from './pages/Faq.jsx'
+import Privacy from './pages/Privacy.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 function ScrollManager() {
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/our-team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* Legacy WordPress paths */}
           <Route path="/pages/our-team" element={<Navigate to="/our-team" replace />} />
           <Route path="/pages/contact" element={<Navigate to="/contact" replace />} />

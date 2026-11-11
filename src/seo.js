@@ -30,13 +30,13 @@ export const ROUTES = {
     path: '/',
     title: 'Mediation, Arbitration & Workplace Investigation in Saskatoon | Dexterity Consulting',
     description:
-      'Independent mediation, arbitration and workplace investigation from Saskatoon, plus accessibility consulting. In person across Western Canada, online nationwide.',
+      'Independent mediation, arbitration and workplace investigation from Saskatoon, plus accessibility consulting. Serving clients across Western Canada and globally.',
   },
   '/our-services': {
     path: '/our-services',
     title: 'Mediation, Arbitration, Investigation & Accessibility Services | Dexterity Consulting',
     description:
-      'Four service lines: accessibility consulting, workplace investigation, dispute resolution (mediation, arbitration, med-arb, family mediation, parent coordination), and research and expert services. Saskatoon-based, national reach.',
+      'Four service lines: accessibility consulting, workplace investigation, dispute resolution (mediation, arbitration, med-arb, family mediation, parent coordination), and research and expert services. Saskatoon-based, serving clients globally.',
   },
   '/our-team': {
     path: '/our-team',
@@ -49,6 +49,12 @@ export const ROUTES = {
     title: 'Frequently Asked Questions | Dexterity Consulting',
     description:
       'Answers to common questions about Dexterity Consulting services, virtual delivery, accessibility of proceedings, response times, and how to get started.',
+  },
+  '/privacy': {
+    path: '/privacy',
+    title: 'Privacy | Dexterity Consulting',
+    description:
+      'How Dexterity Consulting handles information you share through this website, by email, or by phone.',
   },
   '/contact': {
     path: '/contact',
@@ -151,6 +157,7 @@ export function jsonLdFor(path) {
       areaServed: [
         { '@type': 'AdministrativeArea', name: 'Saskatchewan' },
         { '@type': 'Country', name: 'Canada' },
+        'Worldwide',
       ],
       description:
         'Dexterity Consulting makes dispute resolution accessible for all: mediation, arbitration, parent coordination, accessibility consulting, and investigative services.',
