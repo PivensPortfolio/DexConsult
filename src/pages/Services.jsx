@@ -182,7 +182,7 @@ export default function Services() {
 
           <h3>Our Process</h3>
           <p>
-            Dexterity Consulting follows a structured accessible investigation process with flexibility built in
+            Our team follows a structured accessible investigation process with flexibility built in
             to meet the client&rsquo;s needs.
           </p>
 
@@ -244,7 +244,7 @@ export default function Services() {
                 A facilitated process where a neutral mediator helps parties communicate, identify
                 interests, and reach a mutually acceptable resolution. Mediation is voluntary,
                 confidential, and (when it works) often faster and less adversarial than the
-                alternatives. Andy uses both facilitative and evaluative approaches, depending on what the
+                alternatives. Our team uses both facilitative and evaluative approaches, depending on what the
                 situation requires.
               </p>
             </article>
@@ -367,7 +367,7 @@ export default function Services() {
               <h3>ADR Training and Curriculum Development</h3>
               <p>
                 Dexterity Consulting develops and delivers training on dispute resolution,
-                accommodation law, accessibility, and human rights. Andy also develops
+                accommodation law, accessibility, and human rights. Our team also develops
                 curriculum, case studies, and exercises for ADR practitioners and HR professionals.
               </p>
             </article>

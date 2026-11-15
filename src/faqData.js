@@ -7,7 +7,7 @@ export const faqs = [
   },
   {
     q: 'Where does Dexterity Consulting work?',
-    a: 'Dexterity Consulting is based in Saskatoon, Saskatchewan. Andy works in person across Saskatchewan and Western Canada, virtually across all Canadian jurisdictions, and on English-language virtual proceedings internationally.',
+    a: 'Dexterity Consulting is based in Saskatoon, Saskatchewan. Our team works in person across Saskatchewan and Western Canada, virtually across all Canadian jurisdictions, and on English-language virtual proceedings internationally.',
   },
   {
     q: 'Are services available virtually?',
@@ -15,7 +15,7 @@ export const faqs = [
   },
   {
     q: 'How quickly will I get a response?',
-    a: 'Dexterity Consulting responds to enquiries within one business day. A free initial consultation is available to discuss your needs and confirm fit before any engagement begins.',
+    a: 'Our team responds to enquiries within one business day. A free initial consultation is available to discuss your needs and confirm fit before any engagement begins.',
   },
   {
     q: 'Are proceedings accessible?',
@@ -23,6 +23,6 @@ export const faqs = [
   },
   {
     q: 'How do I get started?',
-    a: 'Email andy@dexconsult.ca or call 1 (306) 713-3977 to arrange a free initial consultation. Andy will talk through your matter, confirm fit, and provide a clear quote for the work.',
+    a: 'Email andy@dexconsult.ca or call 1 (306) 713-3977 to arrange a free initial consultation. Our team will talk through your matter, confirm fit, and provide a clear quote for the work.',
   },
 ]
