@@ -80,7 +80,7 @@ export default function Services() {
               <p>
                 Dexterity Consulting guides organizations through the full process of developing an
                 accessibility plan that meets legislative requirements under the Accessible
-                Saskatchewan Act (ASA), Accessible Canada Act (ACA) or any applicable legislation to
+                Saskatchewan Act (ASA), Accessible Canada Act (ACA) or any other legislation that applies in
                 your location, and reflects the experiences of people with disabilities in your
                 community. This includes environmental scans, stakeholder engagement, barrier
                 identification, and a clear, prioritized action plan.
@@ -93,7 +93,7 @@ export default function Services() {
                 accessibility. Dexterity Consulting also conducts web accessibility audits using
                 WCAG 2.1 and 2.2 standards, evaluates documents and digital materials for
                 accessibility compliance, and assesses online dispute resolution platforms against
-                Canada&rsquo;s new CAN-ASC-6.2:2025 AI accessibility standard. You get a clear,
+                Canada&rsquo;s CAN-ASC-6.2:2025 AI accessibility standard. You get a clear,
                 practical report, not a checklist. Audit work to date has covered municipal,
                 provincial, federal, private sector, and post-secondary clients.
               </p>
@@ -105,7 +105,7 @@ export default function Services() {
                 the point. Dexterity Consulting designs and facilitates focus groups, community
                 surveys, and stakeholder interviews, drawing out perspectives from people with
                 physical, sensory, intellectual, neurological, and mental health disabilities.
-                Various methodologies can be used grounded in the &ldquo;nothing about us without
+                Various methodologies can be used, grounded in the &ldquo;nothing about us without
                 us&rdquo; principle.
               </p>
             </article>
@@ -153,7 +153,7 @@ export default function Services() {
           <p className="svc-tagline">Independent. Thorough. Done right.</p>
           <p>
             When a serious complaint lands on your desk (harassment, discrimination, a code of
-            conduct violation) the way you respond matters. A credible, independent investigation
+            conduct violation), the way you respond matters. A credible, independent investigation
             protects your employees, your organization, and your legal standing. A flawed one
             creates liability. Dexterity Consulting conducts independent, third-party workplace
             investigations with the procedural fairness, rigour, and sensitivity these situations
@@ -176,13 +176,13 @@ export default function Services() {
           </ul>
           <p>
             Whether the complaint involves one incident or a pattern of behaviour (whether it
-            involves a frontline employee or a senior leader) the process is the same: thorough,
+            involves a frontline employee or a senior leader), the process is the same: thorough,
             fair, and documented.
           </p>
 
           <h3>Our Process</h3>
           <p>
-            Our team follows a structured accessible investigation process with flexibility built in
+            Dexterity Consulting follows a structured accessible investigation process with flexibility built in
             to meet the client&rsquo;s needs.
           </p>
 
@@ -243,8 +243,8 @@ export default function Services() {
               <p>
                 A facilitated process where a neutral mediator helps parties communicate, identify
                 interests, and reach a mutually acceptable resolution. Mediation is voluntary,
-                confidential, and (when it works) faster and less adversarial than any other option.
-                Our team uses both facilitative and evaluative approaches, depending on what the
+                confidential, and (when it works) often faster and less adversarial than the
+                alternatives. Andy uses both facilitative and evaluative approaches, depending on what the
                 situation requires.
               </p>
             </article>
@@ -277,8 +277,8 @@ export default function Services() {
                 agreements on parenting arrangements, property division, and child or spousal
                 support without going to court. Andy uses an interest-based facilitative approach,
                 working with both parents jointly or in separate sessions where conflict warrants.
-                Family mediation is faster, less adversarial, and produces more durable agreements
-                than litigated outcomes. Independent legal advice for each party is encouraged
+                Family mediation is often faster and less adversarial than litigation, and can
+                produce more durable agreements. Independent legal advice for each party is encouraged
                 before any agreement is finalized.
               </p>
             </article>
@@ -321,7 +321,7 @@ export default function Services() {
             Evidence for the cases that matter. Analysis that holds up.
           </p>
           <p>
-            Fifteen years of practice at the intersection of disability accommodation, human rights,
+            Over fifteen years of practice at the intersection of disability accommodation, human rights,
             and dispute resolution produces something most consultants don&rsquo;t have: a research
             base built on real cases, real decisions, and real data, not theoretical models.
           </p>
@@ -332,7 +332,7 @@ export default function Services() {
               <p>
                 Dexterity Consulting provides expert opinion and litigation support services in
                 disability accommodation, employment accessibility, human rights complaint
-                processes, and alternative dispute resolution procedure. Services include written
+                processes, and alternative dispute resolution procedures. Services include written
                 expert reports, reviewing opposing expert opinions, and oral testimony.
               </p>
               <p>
@@ -367,7 +367,7 @@ export default function Services() {
               <h3>ADR Training and Curriculum Development</h3>
               <p>
                 Dexterity Consulting develops and delivers training on dispute resolution,
-                accommodation law, accessibility, and human rights. Our team also develops
+                accommodation law, accessibility, and human rights. Andy also develops
                 curriculum, case studies, and exercises for ADR practitioners and HR professionals.
               </p>
             </article>

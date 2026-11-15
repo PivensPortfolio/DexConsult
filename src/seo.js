@@ -36,13 +36,13 @@ export const ROUTES = {
     path: '/our-services',
     title: 'Mediation, Arbitration, Investigation & Accessibility Services | Dexterity Consulting',
     description:
-      'Four service lines: accessibility consulting, workplace investigation, dispute resolution (mediation, arbitration, med-arb, family mediation, parent coordination), and research and expert services. Saskatoon-based, serving clients globally.',
+      'Mediation, arbitration, family mediation, workplace investigation, accessibility consulting, and expert services. Saskatoon-based, serving clients globally.',
   },
   '/our-team': {
     path: '/our-team',
     title: 'Andy Livingston, Q.Arb, Q.Med | Arbitrator, Mediator & Investigator | Dexterity Consulting',
     description:
-      'Meet Andrew (Andy) Livingston, President and CEO of Dexterity Consulting: independent arbitrator, mediator, workplace investigator, and accessibility consultant based in Saskatoon.',
+      'Andy Livingston, President and CEO of Dexterity Consulting: independent arbitrator, mediator, workplace investigator and accessibility consultant in Saskatoon.',
   },
   '/faq': {
     path: '/faq',

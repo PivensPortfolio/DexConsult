@@ -83,8 +83,8 @@ export default function Home() {
             <div className="pillar">
               <h3>Qualified</h3>
               <p>
-                Led by Andy Livingston, MA, Q.Med, Q.Arb: a Qualified Mediator and Qualified
-                Arbitrator with nearly a decade at the Saskatchewan Human Rights Commission.
+                Led by Andy Livingston, MA, Q.Arb, Q.Med: a Qualified Arbitrator and Qualified
+                Mediator with nearly a decade at the Saskatchewan Human Rights Commission.
               </p>
             </div>
             <div className="pillar">

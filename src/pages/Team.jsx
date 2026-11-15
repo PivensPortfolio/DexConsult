@@ -101,13 +101,16 @@ export default function Team() {
             Andy holds a Master of Arts in Sociology and a Bachelor of Arts with Double Honours in
             Political Science and Sociology, both from the University of Saskatchewan. He is a
             Qualified Arbitrator (Q.Arb) and Qualified Mediator (Q.Med) with the ADR Institute of
-            Canada, and a Member of the Chartered Institute of Arbitrators (MCIArb). On the
+            Canada (ADRIC), and a Member of the Chartered Institute of Arbitrators (MCIArb). On the
             accessibility side, he is a Rick Hansen Foundation Accessibility Certification (RHFAC)
             Professional, qualified to formally rate buildings for accessibility. He holds an Online
             Dispute Resolution certificate from ADRIC and has completed advanced web accessibility
             training through Deque University.
           </p>
-          <p>Andy teaches mediation and arbitration certification courses at Herzing College.</p>
+          <p>
+            Andy is Instructor and Head of Course Development for the Arbitration Certificate at
+            Herzing College, and also teaches mediation certification courses.
+          </p>
 
           <h3>Appointments &amp; Memberships</h3>
           <ul className="affiliations">

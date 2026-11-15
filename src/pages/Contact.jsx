@@ -80,7 +80,7 @@ export default function Contact() {
         <div className="container">
           <p className="kicker kicker--light">Get in touch</p>
           <h1>Contact</h1>
-          <p>Start your accessibility journey with us.</p>
+          <p>Start the conversation.</p>
         </div>
       </section>
 
